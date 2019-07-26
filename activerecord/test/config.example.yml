@@ -49,6 +49,9 @@ connections:
 <% if ENV['MYSQL_SOCK'] %>
       socket: "<%= ENV['MYSQL_SOCK'] %>"
 <% end %>
+<% if ENV['MYSQL_PORT'] %>
+      port: <%= ENV['MYSQL_PORT'] %>
+<% end %>
     arunit2:
       username: rails
       encoding: utf8mb4
@@ -61,6 +64,9 @@ connections:
 <% end %>
 <% if ENV['MYSQL_SOCK'] %>
       socket: "<%= ENV['MYSQL_SOCK'] %>"
+<% end %>
+<% if ENV['MYSQL_PORT'] %>
+      port: <%= ENV['MYSQL_PORT'] %>
 <% end %>
 
   oracle:

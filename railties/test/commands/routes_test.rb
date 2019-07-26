@@ -255,7 +255,7 @@ rails_conductor_inbound_email_incinerate POST   /rails/conductor/action_mailbox/
       URI               | /rails/conductor/action_mailbox/inbound_emails(.:format)
       Controller#Action | rails/conductor/action_mailbox/inbound_emails#index
       --[ Route 9 ]--------------
-      Prefix            | 
+      Prefix            |
       Verb              | POST
       URI               | /rails/conductor/action_mailbox/inbound_emails(.:format)
       Controller#Action | rails/conductor/action_mailbox/inbound_emails#create
@@ -275,17 +275,17 @@ rails_conductor_inbound_email_incinerate POST   /rails/conductor/action_mailbox/
       URI               | /rails/conductor/action_mailbox/inbound_emails/:id(.:format)
       Controller#Action | rails/conductor/action_mailbox/inbound_emails#show
       --[ Route 13 ]-------------
-      Prefix            | 
+      Prefix            |
       Verb              | PATCH
       URI               | /rails/conductor/action_mailbox/inbound_emails/:id(.:format)
       Controller#Action | rails/conductor/action_mailbox/inbound_emails#update
       --[ Route 14 ]-------------
-      Prefix            | 
+      Prefix            |
       Verb              | PUT
       URI               | /rails/conductor/action_mailbox/inbound_emails/:id(.:format)
       Controller#Action | rails/conductor/action_mailbox/inbound_emails#update
       --[ Route 15 ]-------------
-      Prefix            | 
+      Prefix            |
       Verb              | DELETE
       URI               | /rails/conductor/action_mailbox/inbound_emails/:id(.:format)
       Controller#Action | rails/conductor/action_mailbox/inbound_emails#destroy
@@ -320,7 +320,7 @@ rails_conductor_inbound_email_incinerate POST   /rails/conductor/action_mailbox/
       URI               | /rails/active_storage/blobs/proxy/:signed_id/*filename(.:format)
       Controller#Action | active_storage/blobs/proxy#show
       --[ Route 22 ]-------------
-      Prefix            | 
+      Prefix            |
       Verb              | GET
       URI               | /rails/active_storage/blobs/:signed_id/*filename(.:format)
       Controller#Action | active_storage/blobs/redirect#show
@@ -335,7 +335,7 @@ rails_conductor_inbound_email_incinerate POST   /rails/conductor/action_mailbox/
       URI               | /rails/active_storage/representations/proxy/:signed_blob_id/:variation_key/*filename(.:format)
       Controller#Action | active_storage/representations/proxy#show
       --[ Route 25 ]-------------
-      Prefix            | 
+      Prefix            |
       Verb              | GET
       URI               | /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format)
       Controller#Action | active_storage/representations/redirect#show
