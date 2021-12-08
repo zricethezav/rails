@@ -27,7 +27,7 @@ jobs:
           MYSQL_ROOT_PASSWORD: secret
     strategy:
       matrix:
-        ruby_version: [2.6.x]
+        ruby: ["2.7", "3.0", "head"]
         gem:
         - activesupport
         - actionmailer
@@ -46,8 +46,15 @@ jobs:
         - guides
         - railties
       fail-fast: false
-    name: ${{ matrix.gem }}
+    name: ${{ matrix.ruby }} - ${{ matrix.gem }}
     steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
     - name: Install libraries
       run: |
         sudo apt-get update
@@ -72,21 +79,10 @@ jobs:
     - name: Install Node
       uses: actions/setup-node@v1
       with:
-        version: 12.x
+        node-version: 12.x
     - name: Install NPM
       run: |
         npm install
-    - name: Checkout
-      uses: actions/checkout@master
-    - name: Update Ruby and Dependencies
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y bison ruby ruby-dev libffi-dev libgdbm-dev libgmp-dev libjemalloc-dev libncurses5-dev libncursesw5-dev libreadline6-dev libssl-dev libyaml-dev openssl zlib1g-dev libmysqlclient-dev libpq-dev sqlite3 libsqlite3-dev redis-tools curl libxml2-dev tzdata
-        sudo gem install bundler -v '1.17.3'
-    - name: Install dependencies
-      run: |
-        sudo gem install bundler -v '1.17.3'
-        bundle install -j8
     - name: Run tests
       run: |
         IFS=: read -a GEM <<<"${{ matrix.gem }}"
