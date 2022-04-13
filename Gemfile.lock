@@ -302,7 +302,7 @@ GEM
     method_source (1.0.0)
     mini_magick (4.11.0)
     mini_mime (1.1.0)
-    mini_portile2 (2.5.3)
+    mini_portile2 (2.8.0)
     minitest (5.14.4)
     minitest-bisect (1.5.1)
       minitest-server (~> 1.0)
@@ -324,11 +324,11 @@ GEM
     mustermann (1.1.1)
       ruby2_keywords (~> 0.0.1)
     mysql2 (0.5.3)
-    nio4r (2.5.7)
-    nokogiri (1.11.3)
-      mini_portile2 (~> 2.5.0)
+    nio4r (2.5.8)
+    nokogiri (1.13.4)
+      mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
-    nokogiri (1.11.3-x86_64-darwin)
+    nokogiri (1.13.4-x86_64-darwin)
       racc (~> 1.4)
     os (1.1.1)
     parallel (1.20.1)
@@ -345,7 +345,7 @@ GEM
       selenium-webdriver
       thor
     raabro (1.4.0)
-    racc (1.5.2)
+    racc (1.6.0)
     rack (2.2.3)
     rack-cache (1.12.1)
       rack (>= 0.4)
@@ -502,7 +502,7 @@ GEM
       railties (>= 4.2)
     webrick (1.7.0)
     websocket (1.2.9)
-    websocket-driver (0.7.3)
+    websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     xpath (3.2.0)
@@ -543,7 +543,7 @@ DEPENDENCIES
   minitest-reporters
   minitest-retry
   mysql2 (>= 0.4.10)
-  nokogiri (>= 1.8.1)
+  nokogiri (>= 1.13.4)
   pg (>= 0.18.0)
   psych (~> 3.0)
   puma
