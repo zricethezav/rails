@@ -6,19 +6,6 @@ module ActiveJob
   # The <tt>ActiveJob::Serializers</tt> module is used to store a list of known serializers
   # and to add new ones. It also has helpers to serialize/deserialize objects.
   module Serializers # :nodoc:
-    extend ActiveSupport::Autoload
-
-    autoload :ObjectSerializer
-    autoload :TimeObjectSerializer
-    autoload :SymbolSerializer
-    autoload :DurationSerializer
-    autoload :DateTimeSerializer
-    autoload :DateSerializer
-    autoload :TimeWithZoneSerializer
-    autoload :TimeSerializer
-    autoload :ModuleSerializer
-    autoload :RangeSerializer
-
     mattr_accessor :_additional_serializers
     self._additional_serializers = Set.new
 
@@ -56,7 +43,8 @@ module ActiveJob
       end
     end
 
-    add_serializers SymbolSerializer,
+    add_serializers \
+      SymbolSerializer,
       DurationSerializer,
       DateTimeSerializer,
       DateSerializer,

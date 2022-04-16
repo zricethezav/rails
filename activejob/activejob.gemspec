@@ -34,4 +34,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency "activesupport", version
   s.add_dependency "globalid", ">= 0.3.6"
+  s.add_dependency "zeitwerk", "~> 2.5"
 end

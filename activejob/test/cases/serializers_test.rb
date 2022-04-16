@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 require "helper"
-require "active_job/serializers"
 
 class SerializersTest < ActiveSupport::TestCase
   class DummyValueObject

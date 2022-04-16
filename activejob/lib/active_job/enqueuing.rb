@@ -1,14 +1,7 @@
 # frozen_string_literal: true
 
-require "active_job/arguments"
-
 module ActiveJob
   # Provides behavior for enqueuing jobs.
-
-  # Can be raised by adapters if they wish to communicate to the caller a reason
-  # why the adapter was unexpectedly unable to enqueue a job.
-  class EnqueueError < StandardError; end
-
   module Enqueuing
     extend ActiveSupport::Concern
 

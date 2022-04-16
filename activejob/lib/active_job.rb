@@ -25,20 +25,24 @@
 
 require "active_support"
 require "active_support/rails"
-require "active_job/version"
 require "global_id"
+require "zeitwerk"
+
+Zeitwerk::Loader.for_gem.tap do |loader|
+  loader.ignore(
+    "#{__dir__}/rails",
+    "#{__dir__}/active_job/errors.rb",
+    "#{__dir__}/active_job/gem_version.rb",
+    "#{__dir__}/active_job/railtie.rb"
+  )
+
+  loader.do_not_eager_load(
+    "#{__dir__}/active_job/queue_adapters",
+    "#{__dir__}/active_job/test_helper.rb",
+    "#{__dir__}/active_job/test_case.rb"
+  )
+end.setup
 
 module ActiveJob
-  extend ActiveSupport::Autoload
-
-  autoload :Base
-  autoload :QueueAdapters
-
-  eager_autoload do
-    autoload :Serializers
-    autoload :ConfiguredJob
-  end
-
-  autoload :TestCase
-  autoload :TestHelper
+  require_relative "active_job/errors"
 end

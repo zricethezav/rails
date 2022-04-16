@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "active_job/queue_adapters/delayed_job_adapter"
-
 class DelayedJobAdapterTest < ActiveSupport::TestCase
   test "does not log arguments when log_arguments is set to false on a job" do
     job_id = SecureRandom.uuid

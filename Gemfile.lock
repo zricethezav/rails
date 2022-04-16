@@ -65,6 +65,7 @@ PATH
     activejob (7.1.0.alpha)
       activesupport (= 7.1.0.alpha)
       globalid (>= 0.3.6)
+      zeitwerk (~> 2.5)
     activemodel (7.1.0.alpha)
       activesupport (= 7.1.0.alpha)
     activerecord (7.1.0.alpha)
