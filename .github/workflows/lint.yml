@@ -2,6 +2,7 @@ name: Lint
 
 on: [pull_request]
 
+
 jobs:
   codespell:
     name: Check spelling all files with codespell
